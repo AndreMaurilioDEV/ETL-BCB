@@ -4,7 +4,7 @@ import pandas as pd
 from src.load import salvarSqlite
 from src.load import salvarMySQL
 
-dadosBcb = trimestreFunc("20231")
+dadosBcb = trimestreFunc("20291")
 
 # salvarCsv(dadosBcb, 'ETL-BCB/src/datasets/meiosPagamentosTri.csv', ';', '.')
 

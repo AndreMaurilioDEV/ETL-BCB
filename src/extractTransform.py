@@ -14,8 +14,10 @@ def trimestreFunc(trimestre: str) -> pd.DataFrame:
     """
     url = f"https://olinda.bcb.gov.br/olinda/servico/MPV_DadosAbertos/versao/v1/odata/MeiosdePagamentosTrimestralDA(trimestre=@trimestre)?@trimestre='{trimestre}'&$format=json"
     req = requests.get(url)
-    print("Status Code:", req.status_code)
+    print("Status Code:", req.status_code, url)
     dados = req.json()
     df = pd.json_normalize(dados["value"])
     df["datatrimestre"] = pd.to_datetime(df["datatrimestre"])
     return df
+
+trimestreFunc("20191")
