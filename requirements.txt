@@ -3,3 +3,4 @@ requests
 sqlalchemy 
 pymysql
 black
+matplotlib
